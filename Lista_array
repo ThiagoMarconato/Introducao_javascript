@@ -1,1 +1,33 @@
 
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <ul id="lista"> 
+        </ul>
+        <input type="text" name="nome" id="nome">
+        <button onclick="adicionar()">Adicionar </button>
+        <script>
+            var nomes = ['Diego', 'Joao', 'Maria'];
+            var containerElement = document.getElementById("lista");
+            for (var i = 0; i<nomes.length; i++){
+                var item = document.createElement('li');
+                item.appendChild(document.createTextNode(nomes[i]));
+                containerElement.appendChild(item);
+            }
+            var inputElement = document.getElementById('nome')
+            function adicionar(){
+              var text = inputElement.value;
+              var item2 = document.createElement('li');
+              item2.appendChild(document.createTextNode(text));
+              containerElement.appendChild(item2);
+              document.getElementById('nome').value=' ';
+            }
+
+            
+
+        </script>
+    </body>
+</html>
